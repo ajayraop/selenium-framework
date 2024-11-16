@@ -1,0 +1,38 @@
+package pages;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class AutoTraderPage extends BasePage {
+    // TODO - locators need to be added for Confused.com site
+
+    public AutoTraderPage(WebDriver driver) {
+        super(driver);
+    }
+
+    @Override
+    public void acceptCookies() {
+        // TODO - Implement the acceptCookies method
+    }
+
+    @Override
+    public void searchCar(String reg, int mileage) {
+        // TODO - Implement the searchCar method with the given reg and mileage
+    }
+
+    @Override
+    public void waitForLoadingImageToAppearAndDisappear() {
+        // TODO - Implement the waitForLoadingImageToAppearAndDisappear method
+    }
+
+    @Override
+    public Map<String, String[]> getCarDetails() {
+        // TODO - Implement the getCarDetails method to return actual car details
+        return new HashMap<>() {
+        };
+    }
+}
+
