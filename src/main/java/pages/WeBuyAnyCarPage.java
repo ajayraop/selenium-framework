@@ -12,7 +12,7 @@ public class WeBuyAnyCarPage extends BasePage {
     private final By mileageInput = By.id("Mileage");
     private final By submitButton = By.id("btn-go");
 
-    //Search Results
+    // Search Results
     private final By carDetails = By.cssSelector(".order-lg-3");
     private final By reg = By.cssSelector("div.details-vrm.ng-star-inserted");
     private final By make = By.cssSelector("div.d-table div:nth-child(1) div.value");

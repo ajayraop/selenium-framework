@@ -47,7 +47,7 @@ public class FileParser {
 
                     String[] detailParts = details.split(",");
 
-                    // store the registration number and car default
+                    // store the registration number and car details
                     expectedData.put(reg, detailParts);
                 }
             }

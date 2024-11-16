@@ -1,13 +1,12 @@
 package pages;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 import java.util.HashMap;
 import java.util.Map;
 
 public class ConfusedPage extends BasePage {
-    //    TODO - locators need to be updated for Confused.com site
+    //    TODO - locators need to be added for Confused.com site
 
     public ConfusedPage(WebDriver driver) {
         super(driver);
