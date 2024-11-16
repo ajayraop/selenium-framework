@@ -29,8 +29,7 @@ public abstract class BasePage {
                 .pollingEvery(Duration.ofMillis(500))  // Interval to check for element
                 .ignoring(NoSuchElementException.class)  // Ignore if element is not found immediately
                 .ignoring(ElementNotInteractableException.class); // Ignore if element is not interactable
-
-        return fluentWait.until(ExpectedConditions.presenceOfElementLocated(locator)); // Return element when found
+        return fluentWait.until(ExpectedConditions.presenceOfElementLocated(locator));
     }
 
     public WebElement waitForElementToBeVisible(By locator) {
@@ -58,23 +57,9 @@ public abstract class BasePage {
         element.sendKeys(text);
     }
 
-    public String getElementText(By locator) {
-        WebElement element = waitForElementToBeVisible(locator);
-        return element.getText();
-    }
-
     public String getChildElementText(By parentLocator, By childLocator) {
         WebElement parentElement = waitForElementToBeVisible(parentLocator);
         return parentElement.findElement(childLocator).getText();
-    }
-
-    public boolean isElementPresent(By locator) {
-        try {
-            return driver.findElement(locator).isDisplayed();
-        } catch (NoSuchElementException e) {
-            System.out.println("Element is not present: " + locator);
-            return false;
-        }
     }
 
     public void waitForImageToAppearAndDisappear(By locator) {

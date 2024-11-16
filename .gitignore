@@ -71,3 +71,6 @@ Thumbs.db
 # Ignore temporary files and editor backups
 *~
 *.swp
+
+# Ignore html report
+extent_report.html

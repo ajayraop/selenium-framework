@@ -21,7 +21,6 @@ public class PropertiesLoader {
     }
 
     public String getBaseUrl() {
-        //
         String siteName = getSystemPropertyIgnoreCase("site", "webuyanycar");
         System.setProperty("site", siteName);
         String baseUrl = properties.getProperty(siteName);

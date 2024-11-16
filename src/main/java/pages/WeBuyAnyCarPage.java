@@ -18,7 +18,6 @@ public class WeBuyAnyCarPage extends BasePage {
     private final By make = By.cssSelector("div.d-table div:nth-child(1) div.value");
     private final By model = By.cssSelector("div.d-table div:nth-child(2) div.value");
     private final By year = By.cssSelector("div.d-table div:nth-child(3) div.value");
-    private final By carNotFound = By.cssSelector(".text-focus.ng-star-inserted");
     private final By loading = By.cssSelector("img[loading='eager']");
 
     public WeBuyAnyCarPage(WebDriver driver) {

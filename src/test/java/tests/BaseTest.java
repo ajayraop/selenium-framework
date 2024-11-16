@@ -13,6 +13,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import pages.AutoTraderPage;
 import pages.BasePage;
 import pages.ConfusedPage;
+import utils.DriverManager;
 import utils.PropertiesLoader;
 import pages.WeBuyAnyCarPage;
 
@@ -72,10 +73,7 @@ public class BaseTest {
 
     @BeforeEach
     public void setUp() {
-
-        WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
-        driver.manage().window().maximize();
+        driver = DriverManager.getDriver();
         driver.get(baseUrl);
 
         String site = System.getProperty("site");
@@ -97,9 +95,7 @@ public class BaseTest {
 
     @AfterEach
     public void tearDown() {
-        if (driver != null) {
-            driver.quit();
-        }
+        DriverManager.quitDriver();
     }
 
     @AfterAll
